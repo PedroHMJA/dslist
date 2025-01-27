@@ -5,12 +5,12 @@ import org.springframework.beans.BeanUtils;
 import com.devsuperior.dslist.entities.Game;
 
 public class GameDTO {
-	private long id;
+	private Long id;
 	private String title;
-	private int year;
+	private Integer year;
 	private String genre;
 	private String platforms;
-	private double score;
+	private Double score;
 	private String imgUrl;
 	private String shortDescription;
 	private String longDescription;
@@ -26,7 +26,7 @@ public class GameDTO {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -42,7 +42,7 @@ public class GameDTO {
 		return year;
 	}
 
-	public void setYear(int year) {
+	public void setYear(Integer year) {
 		this.year = year;
 	}
 
@@ -66,7 +66,7 @@ public class GameDTO {
 		return score;
 	}
 
-	public void setScore(double score) {
+	public void setScore(Double score) {
 		this.score = score;
 	}
 
