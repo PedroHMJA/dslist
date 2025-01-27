@@ -18,4 +18,13 @@ public interface GameRepository extends JpaRepository<Game, Long> {
 			ORDER BY tb_belonging.position
 				""")
 	List<GameMinProjection> searchByList(Long listId);
+	
+	
+	@Query(nativeQuery = true, value = """
+			SELECT tb_game.id, tb_game.title, tb_game.game_year AS `year`, score
+			FROM tb_game
+			ORDER BY score DESC
+			LIMIT 3
+			""")
+	List<GameMinProjection> findTop();
 }

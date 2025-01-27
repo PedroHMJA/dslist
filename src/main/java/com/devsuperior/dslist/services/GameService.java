@@ -35,4 +35,10 @@ public class GameService {
 		List<GameMinProjection> result = gameRepository.searchByList(listId);
 		return result.stream().map(x -> new GameMinDTO(x)).toList();
 	}
+	
+	@Transactional(readOnly = true)
+	public List<GameMinDTO> findTop(){
+		List<GameMinProjection> result = gameRepository.findTop();
+		return result.stream().map(x -> new GameMinDTO(x)).toList();
+	}
 }

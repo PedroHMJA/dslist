@@ -30,4 +30,9 @@ public class GameController {
 		List<GameMinDTO> result = gameService.findAll();
 		return result;
 	}
+	@GetMapping(value = "/top")
+	public List<GameMinDTO> findTop(){
+		List<GameMinDTO> result = gameService.findTop();
+		return result;
+	}
 }
